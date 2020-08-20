@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	
+	<title>Electric Insight v2</title>
+	<style type="text/css">
+		
+		body {
+			font-family: 'Open Sans', sans-serif;
+
+		}
+		
+		canvas {
+			border:  1px dotted #ccc;
+		}
+		
+		#text-explain {
+			display: inline-block;
+			font-size: 0.75em;
+			margin-bottom: 1em;
+		}
+
+		.alert {
+			color: tomato;
+		}
+		.scatter-container {
+    margin: auto;
+    width: 800px;
+    height: 600px;
+}
+
+.svg-plot, .canvas-plot {
+    position: absolute;
+}
+
+.tools {
+    position: absolute;
+    left: calc(50% + 400px);
+    visibility: hidden;
+}
+#offset{
+	width: 400px;
+}
+.wrap {
+	display: flex;
+}
+.row {
+	margin-bottom: 20px;
+	padding-left: 30px;
+}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+	<div id="container"></div>
+	<div>
+		<!-- <div class="row">
+			<input type="range" id="navigate-slider" name="offset" min="0" max="100" value="0" onchange="render(this)">
+			<label for="offset">Navigation</label>
+		</div> -->
+		<div class="row">
+			<button type="button" id="zoom-in-btn">Zoom In</button>
+			<button type="button" id="zoom-out-btn">Zoom Out</button>
+		</div>
+		<h2 class="row">Total jobs: <span id="total-jobs-counter"></span></h2>
+		<div class="row">
+			<input type="text" id="jobs-total-inp"/>
+			<button type="button" id="add-btn">Add More Jobs</button>
+		</div>
+		<p class="row" id="clicked-el"></p>
+	  </div>
+	</div>
+	<script src='bundle.js'></script>
+</body>
+</html>
