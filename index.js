@@ -48439,6 +48439,7 @@
 	    console.log(e);
 	    
 	}); */
+	const colors = ['0x55DDE0', '0x33658a', '0x2f4858', '0xf6ae2d', '0xf26419', '0x16db93'];
 	function onAssetsLoaded() {
 	    //const bitmapFontText = new PIXI.BitmapText('bitmap', { font: '12px AdobeGothicStd-Bold', align: 'left' });
 
@@ -48463,7 +48464,7 @@
 	        
 	        rect.x = xCoord;
 	        rect.y = yCoord;
-	        rect.tint = Math.random() * 0x8080CD;
+	        rect.tint = colors[Math.floor(Math.random() * 1000 % 6)];
 	        rect.interactive = true;
 	        rect.buttonMode = true;
 	        //rect.anchor.set(0.5)
@@ -48537,7 +48538,7 @@
 	        rect.width = rWidth;
 	        rect.height = rHeight;
 	        
-	        rect.tint = Math.random() * 0x8080CD;
+	        rect.tint = colors[Math.floor(Math.random() * 1000 % 6)];
 	        rect.interactive = true;
 	        rect.buttonMode = true;
 	        //rect.anchor.set(0.5)
